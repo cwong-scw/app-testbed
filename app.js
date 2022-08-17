@@ -10,6 +10,8 @@ app.get('/foo/:id', (req, res) => {
     eval('console.log("something else", ' + req.params.id + ')');
     // #3
     eval(`console.log("something else", ${req.params.id})`);
+    eval('aaaaa' + req.params.id)
+    res.send("hi user " + req.params.id);
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
